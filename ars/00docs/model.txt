@@ -25,3 +25,6 @@ what is Bootstrap?
 what is HTML5?
     markup language  to mark the content of tech site pages
 
+what is css?
+    style languageto make webpage look and feel
+
