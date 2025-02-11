@@ -26,5 +26,63 @@ what is HTML5?
     markup language  to mark the content of tech site pages
 
 what is css?
-    style languageto make webpage look and feel
+    style language to make webpage look and feel
 
+where react app is developed ?
+    -server side js --node.js
+
+where react app used ?
+    -client side (broswer)
+    -after translation of server side js code base into client side code base
+
+what is react ?
+    -frontend app development framework library
+        -package of node.js + UI(presentation)
+
+FULL STACK
+            - [client ] [appplication/business] [data]
+                        ------------------------------
+                            [server]
+
+[client]                   - react / angular / vue
+[Application/business]     - go lang / express /  django / flask / web api / c# / java spring
+[data]                     -mongo / oracle / mysqul / sqlite
+
+to create react Application named "client"
+    -$npx create-react-app client
+    or 
+    -$npm create vite@latest client -- --template react
+
+to create react Application under current folder named "client"
+    -$npm create vite@latest . -- --template react
+
+in src main.jsx is a first file which get access like main function in program
+    -.jsx  - java script xml
+
+index.html
+    -Bootstrap css + js
+
+main.jsx
+    in this commment // index.html
+
+App.jsx 
+    route(navigation) bt    PageList ,     PageCreate ,    PageEdit
+                            /flight/list   /flight/create  /flight/edit 
+
+src/header/
+    PageHeader.jsx
+
+src/flights/
+    FlightCreate.jsx
+    FlightEdit.jsx
+    FlightList.jsx
+
+        in this xml we need to change class -> className
+                                      for   -> htmlFor
+        
+        in this xml <input> is not closed so we need to close maually by adding "/" { <input    />   }
+
+to install react-router-dom for navigation between page components
+    $npm install react-router-dom
+
+    to verify - open package.json here some code is present
