@@ -1,4 +1,4 @@
-function PageHeader({PageNumber}) {
+function PageHeader({ PageNumber }) {
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -10,10 +10,10 @@ function PageHeader({PageNumber}) {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className={PageNumber == 1 ?"nav-link active":"nav-link" } aria-current="page" href="/flights/list">Flights</a>
+                                <a className={PageNumber == 1 ? "nav-link active" : "nav-link"} aria-current="page" href="/flights/list">Flights</a>
                             </li>
                             <li className="nav-item">
-                                <a className={PageNumber == 2 ?"nav-link active":"nav-link" } href="/flights/create">Create Flight</a>
+                                <a className={PageNumber == 2 ? "nav-link active" : "nav-link"} href="/flights/create">Create Flight</a>
                             </li>
                         </ul>
                     </div>
