@@ -107,7 +107,8 @@ base server url : hhtp://localhost:8080
                                         verb               noun
             - Add flight                POST               /flights                     {"flight_number":"AU123","airway_name":"AIRINDIA","source":"Bengluru","destination":"Delhi","capacity":"250","price":"12000"}
             - Edit Flight               PUT/PATCH          /flights/:id                 {"flight_number":"AU123","airway_name":"AIRINDIA","source":"Bengluru","destination":"Delhi","capacity":"250","price":"12000"}
-            - delete flight             delete             /flights/:id     
+            - delete flight             DELETE             /flights/:id 
+            - display by id             GET                /flights/:id     
             - display all flights       GET                /flights
 
 api endpoint = method + url
