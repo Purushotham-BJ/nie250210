@@ -39,6 +39,8 @@ what is react ?
     -frontend app development framework library
         -package of node.js + UI(presentation)
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 FULL STACK
             - [client ] [appplication/business] [data]
                         ------------------------------
@@ -86,3 +88,45 @@ to install react-router-dom for navigation between page components
     $npm install react-router-dom
 
     to verify - open package.json here some code is present
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+03app_mongoless
+        client
+        server          go lang | backend | RESTful API : http based web service
+                        gin framework is used (gin : library)
+        
+        defaut web server number is 80
+
+ flights : id , flight_number , airway_name , source , destination , capacity , price 
+
+base server url : hhtp://localhost:8080
+
+ - flight management :
+    crud operation                      method            url                           content(form of .json)
+                                        verb               noun
+            - Add flight                POST               /flights                     {"flight_number":"AU123","airway_name":"AIRINDIA","source":"Bengluru","destination":"Delhi","capacity":"250","price":"12000"}
+            - Edit Flight               PUT/PATCH          /flights/:id                 {"flight_number":"AU123","airway_name":"AIRINDIA","source":"Bengluru","destination":"Delhi","capacity":"250","price":"12000"}
+            - delete flight             delete             /flights/:id     
+            - display all flights       GET                /flights
+
+api endpoint = method + url
+endpoint  = http protocal + url
+
+request handler contain all this crud operation
+for testing :- Thunder Client is used as request handler which avilable as extention
+
+200  OK -- read status using get
+201  CREATE -- add status using POST  (use double coated text data ("number"))
+
+
+go programrun in intrgrated terminal
+commend to create go.mod -- go mod init purushotham.com/main
+to download gin- gonic module - go get github.com/gin-gonic/gin
+
+
+fmt - core module -format module used to print /scan
+deducing - declare the data without datatype ex :- third := 50
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
