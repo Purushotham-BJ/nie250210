@@ -4,7 +4,7 @@ function FlightCreate() {
     return (
         <>
             <PageHeader PageNumber={2} />
-            <h3>Create Flight</h3>
+            <h3>Add Flight</h3>
             <div className="container">
                 <div className="mb-3">
                     <label htmlFor="flight_number" className="form-label">Flight Number : </label>
@@ -40,7 +40,7 @@ function FlightCreate() {
                     <label htmlFor="price" className="form-label">Ticket price : </label>
                     <input type="text" className="form-control" id="price" placeholder="Please enter price" />
                 </div>
-                <button className="btn btn-success">create</button>
+                <button className="btn btn-success">Add</button>
                 <a href="/flights/list" className="btn btn-warning">Go Back</a>
             </div>
         </>

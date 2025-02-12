@@ -13,7 +13,7 @@ function PageHeader({ PageNumber }) {
                                 <a className={PageNumber == 1 ? "nav-link active" : "nav-link"} aria-current="page" href="/flights/list">Flights</a>
                             </li>
                             <li className="nav-item">
-                                <a className={PageNumber == 2 ? "nav-link active" : "nav-link"} href="/flights/create">Create Flight</a>
+                                <a className={PageNumber == 2 ? "nav-link active" : "nav-link"} href="/flights/create">Add Flight</a>
                             </li>
                         </ul>
                     </div>
