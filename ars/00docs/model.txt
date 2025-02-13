@@ -73,6 +73,8 @@ App.jsx
 
 src/header/
     PageHeader.jsx
+    include return statement  i.e. {export default PageHeader} -- to make the function as a component (to use it later using import from)
+            - is parsed into javascript (put inside the empty elemment {<></>} )
 
 src/flights/
     FlightCreate.jsx
@@ -84,11 +86,16 @@ src/flights/
         
         in this xml <input> is not closed so we need to close maually by adding "/" { <input    />   }
 
-to install react-router-dom for navigation between page components
-    $npm install react-router-dom
 
-    to verify - open package.json here some code is present
+For further navigation we need the router so using  code in  command prompt we can get it 
 
+    -to install react-router-dom for navigation between page components
+        $npm install react-router-dom
+
+    -to verify - open package.json here dependencies code is present
+        
+        then define browserroutes ->  routes  -> route in app.jsx
+            *** if it is not imported then use ctrl+space on the that particular word which you need to import
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 03app_mongoless
@@ -118,7 +125,7 @@ request handler contain all this crud operation
 for testing :- Thunder Client is used as request handler which avilable as extention
 
 200  OK -- read status using get
-201  CREATE -- add status using POST  (use double coated text data ("number"))
+201  CREATE -- add status using POST  (use double coated text data ("number") and use Pascel case)
 
 
 go programrun in intrgrated terminal
@@ -132,3 +139,45 @@ deducing - declare the data without datatype ex :- third := 50
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+to write the client appplication server appplication should be running
+server appplication layer - ui logic 
+client appplication - ux logic
+all ui elements sit in the root elements (main.jsx)
+dom - (document object model) ui's are written in virtual dom (render function)
+
+start to write the fullstack app
+    copy the the client folder from 02client_design to 03app_mongoless
+
+server need to be running in server folder
+now we have in client folder
+    $npm install
+    $npm install axios
+        note axios is the client library
+    $npm run  dev
+
+function we cant maintain state -- so frame work does (we connect {hook})
+    $npm install axios
+
+usestate return2 array (state(flights),function(setFlights))
+
+ map function (highter order method)
+    which takes another method and make changes to the array (arr_name.map((arg)=>{return logic for array;})) 
+    does in one single function
+    example of incrementing salaries
+    > const salaries = [1000,25000,35000,28000]
+undefined
+    > salaries
+    [ 1000, 25000, 35000, 28000 ]
+    > const increment = salaries.map((sal) => {return sal+5})
+    undefined
+    > increment
+    [ 1005, 25005, 35005, 28005 ]
+-----------------------
+change the fields in th to flight.number and change everywhere 
+in href edit button change double quotes to  backtick and then id number to ${flight.id}
+this is called row binding 
+
+const [flights, setFlights] = useState([/*state ref element and state function element(used to set the state*/]);
+
+useEffect hook to call the readAllFlights function
+
