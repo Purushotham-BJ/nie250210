@@ -100,7 +100,7 @@ to install react-router-dom for navigation between page components
 
  flights : id , flight_number , airway_name , source , destination , capacity , price 
 
-base server url : hhtp://localhost:8080
+base server url : http://localhost:8080
 
  - flight management :
     crud operation                      method            url                           content(form of .json)
@@ -124,6 +124,7 @@ for testing :- Thunder Client is used as request handler which avilable as exten
 go programrun in intrgrated terminal
 commend to create go.mod -- go mod init purushotham.com/main
 to download gin- gonic module - go get github.com/gin-gonic/gin
+Run command ->   go run main.go
 
 
 fmt - core module -format module used to print /scan
