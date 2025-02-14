@@ -177,7 +177,7 @@ change the fields in th to flight.number and change everywhere
 in href edit button change double quotes to  backtick and then id number to ${flight.id}
 this is called row binding 
 
-const [flights, setFlights] = useState([/*state ref element and state function element(used to set the state*/]);
+const [flights, setFlights] = useState([/*state ref element and state function element(used to set the state*/)]);
 
 useEffect hook to call the readAllFlights function
 

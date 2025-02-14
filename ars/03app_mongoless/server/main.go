@@ -9,13 +9,13 @@ import (
 )
 
 type Flight struct {
-	Id           string		`json:"id" `	
-	FlightNumber string		`json:"flight_number" `
-	AirwayName   string		`json:"airway_name" `
-	Source       string		`json:"source" `
-	Destination  string		`json:"destination" `
-	Capacity     int		`json:"capacity" `
-	Price        float32	`json:"price" `
+	Id           string		`json:"id,omitempty" bson:"_id,omitempty"` //omitempty is used to ignore the empty fields	
+	FlightNumber string		`json:"flight_number" bson:"flight_number"`
+	AirwayName   string		`json:"airway_name" bson:"airway_name"`
+	Source       string		`json:"source" bson:"source"`
+	Destination  string		`json:"destination" bson:"destination"`
+	Capacity     int		`json:"capacity" bson:"capacity"`
+	Price        float32	`json:"price" bson:"price"`
 }
 
 func readAllFlights(c *gin.Context) {
@@ -61,7 +61,7 @@ func main() {
 	r := gin.Default()
 	//cors
 	r.Use(cors.New(cors.Config{
-		AllowOrigins:     []string{"http://localhost:5173"}, // React frontend URL
+		AllowOrigins:     []string{"http://localhost:5175"}, // React frontend URL
 		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 		AllowHeaders:     []string{"Origin", "Content-Type", "Authorization"},
 		ExposeHeaders:    []string{"Content-Length"},
