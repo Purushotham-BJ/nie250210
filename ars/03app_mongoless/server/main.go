@@ -4,7 +4,6 @@ import (
 	//"fmt"
 	"net/http"
 	"time"
-
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
@@ -71,7 +70,7 @@ func main() {
 	}))
 	r.GET("/flights", readAllFlights)
 	r.GET("/flights/:id", readFlightById)
-	r.POST("/flights/", createFlight)
+	r.POST("/flights", createFlight)
 	r.PUT("/flights/:id", updateFlight)
 	r.DELETE("/flights/:id", deleteFlight)
 	//server (default port 8080) r.Run(":8080")
